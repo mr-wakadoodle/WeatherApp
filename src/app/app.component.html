@@ -1,0 +1,195 @@
+<!-- Splash Screen -->
+<div *ngIf="!dataAvailablity" style="height:100vh; width: 100%;">
+   <img style="height:100%; width:100%;" src="../assets/splash-1.jpg">  
+   <mat-progress-spinner *ngIf="!dataAvailablity" [mode]="'indeterminate'" style="position: absolute; width: 100px; height: 100px; top: calc(50% - 50px); left: calc(50% - 50px);"></mat-progress-spinner>
+</div>
+<!-- Splash Screen -->
+
+<div *ngIf="dataAvailablity">
+    <div class="header">
+      <div><fa-icon [icon]="faBars" (click)=openSideBar()></fa-icon></div>
+      <div>Bengaluru, India</div>
+      <div><fa-icon [icon]="faLocationArrow"></fa-icon></div>
+    </div>
+    <div class="side-nav-bar" [ngClass]="{'open':showSideNavBar, 'close':!showSideNavBar}">
+        <div style="background:#3598dc; padding: 15px;">SETTINGS</div>
+        <ul>
+          <li><fa-icon [icon]="faHome"></fa-icon>Home</li>
+          <li><fa-icon [icon]="faLocationArrow"></fa-icon>Manage locations</li>
+          <li><fa-icon [icon]="faBell"></fa-icon>Notification</li>
+          <li><fa-icon [icon]="faMapPin"></fa-icon>Radar</li>
+          <li><fa-icon [icon]="faCogs"></fa-icon>Unit setting</li>
+          <li><fa-icon [icon]="faShareAlt"></fa-icon>Share</li>
+        </ul>
+    </div>
+    <div class="content">
+        <!-- <div class="card one"></div> -->
+        <div class="card two">
+          <div class="card2-block">
+              <div class="card2-single-block">
+                <div>11:00</div>
+                <div><fa-icon [icon]="faCloudSun"></fa-icon></div>
+                <div><fa-icon [icon]="faUmbrella"></fa-icon> 0%</div>
+                <div>29 C</div>
+              </div>
+              <div class="card2-single-block">
+                <div>12:00</div>
+                <div><fa-icon [icon]="faCloudSun"></fa-icon></div>
+                <div><fa-icon [icon]="faUmbrella"></fa-icon> 0%</div>
+                <div>29 C</div>
+              </div>
+              <div class="card2-single-block">
+                <div>13:00</div>
+                <div><fa-icon [icon]="faCloudSun"></fa-icon></div>
+                <div><fa-icon [icon]="faUmbrella"></fa-icon> 0%</div>
+                <div>29 C</div>
+              </div>
+              <div class="card2-single-block">
+                <div>14:00</div>
+                <div><fa-icon [icon]="faCloud"></fa-icon></div>
+                <div><fa-icon [icon]="faUmbrella"></fa-icon> 0%</div>
+                <div>29 C</div>
+              </div>
+              <div class="card2-single-block">
+                <div>15:00</div>
+                <div><fa-icon [icon]="faCloud"></fa-icon></div>
+                <div><fa-icon [icon]="faUmbrella"></fa-icon> 1%</div>
+                <div>28 C</div>
+              </div>
+              <div class="card2-single-block">
+                <div>16:00</div>
+                <div><fa-icon [icon]="faCloud"></fa-icon></div>
+                <div><fa-icon [icon]="faUmbrella"></fa-icon> 4%</div>
+                <div>27 C</div>
+              </div>
+              <div class="card2-single-block">
+                <div>17:00</div>
+                <div><fa-icon [icon]="faCloud"></fa-icon></div>
+                <div><fa-icon [icon]="faUmbrella"></fa-icon> 6%</div>
+                <div>26 C</div>
+              </div>
+              <div class="card2-single-block">
+                <div>18:00</div>
+                <div><fa-icon [icon]="faCloudMoon"></fa-icon></div>
+                <div><fa-icon [icon]="faUmbrella"></fa-icon> 9%</div>
+                <div>25 C</div>
+              </div>
+            </div>
+        </div>
+
+        <div class="card three">
+          <div style="color:white; margin-bottom: 10px;">Touch a day to see forecast hourly</div>
+          <div class="week-block-data">
+            <div class="week-block">
+              <div class="week-name">SUN</div>
+              <div class="week-high">30</div>
+              <div class="week-bar"><div style="height: 40px;"></div></div>
+              <div class="week-low">16</div>
+              <div><fa-icon [icon]="faCloud"></fa-icon></div>
+              <div><fa-icon [icon]="faUmbrella"></fa-icon> 21%</div>
+            </div>
+            <div class="week-block">
+              <div class="week-name">MON</div>
+              <div class="week-high">29</div>
+              <div class="week-bar"><div style="height: 80px;"></div></div>
+              <div class="week-low">19</div>
+              <div><fa-icon [icon]="faCloudRain"></fa-icon></div>
+              <div><fa-icon [icon]="faUmbrella"></fa-icon> 58%</div>
+            </div>
+            <div class="week-block">
+              <div class="week-name">TUE</div>
+              <div class="week-high">28</div>
+              <div class="week-bar"><div style="height: 54px;"></div></div>
+              <div class="week-low">19</div>
+              <div><fa-icon [icon]="faCloudRain"></fa-icon></div>
+              <div><fa-icon [icon]="faUmbrella"></fa-icon> 60%</div>
+            </div>
+            <div class="week-block">
+              <div class="week-name">WED</div>
+              <div class="week-high">28</div>
+              <div class="week-bar"><div style="height: 30px;"></div></div>
+              <div class="week-low">19</div>
+              <div><fa-icon [icon]="faCloudRain"></fa-icon></div>
+              <div><fa-icon [icon]="faUmbrella"></fa-icon> 79%</div>
+            </div>
+            <div class="week-block">
+              <div class="week-name">THU</div>
+              <div class="week-high">28</div>
+              <div class="week-bar"><div style="height: 55px;"></div></div>
+              <div class="week-low">19</div>
+              <div><fa-icon [icon]="faCloudRain"></fa-icon></div>
+              <div><fa-icon [icon]="faUmbrella"></fa-icon> 87%</div>
+            </div>
+            <div class="week-block">
+              <div class="week-name">FRI</div>
+              <div class="week-high">29</div>
+              <div class="week-bar"><div style="height: 60px;"></div></div>
+              <div class="week-low">18</div>
+              <div><fa-icon [icon]="faCloudSun"></fa-icon></div>
+              <div><fa-icon [icon]="faUmbrella"></fa-icon> 34%</div>
+            </div>
+            <div class="week-block">
+              <div class="week-name">SAT</div>
+              <div class="week-high">29</div>
+              <div class="week-bar"><div style="height: 90px;"></div></div>
+              <div class="week-low">18</div>
+              <div><fa-icon [icon]="faSun"></fa-icon></div>
+              <div><fa-icon [icon]="faUmbrella"></fa-icon> 6%</div>
+            </div>
+          </div>
+        </div>
+        <div class="card four">
+          <div style="display: flex; justify-content: space-between; color: white;">
+            <div>Today: 30 - 16</div>
+            <div><fa-icon [icon]="faCloud"></fa-icon></div>
+          </div>
+          <div class="card-four-top">
+            <div class="top">
+                <div><fa-icon [icon]="faUmbrella"></fa-icon></div>
+                <div>21%</div>
+            </div>
+            <div class="top">
+                <div><fa-icon [icon]="faWind"></fa-icon></div>
+                <div>7 km/h</div>
+            </div>
+            <div class="top">
+                <div><fa-icon [icon]="faThermometerHalf"></fa-icon></div>
+                <div>78%</div>
+            </div>
+            <div class="top">
+                <div><fa-icon [icon]="faCloud"></fa-icon></div>
+                <div>44%</div>
+            </div>
+          </div>
+          <div class="card-four-title">Foggy in the morning</div>
+
+          <div style="display: flex; justify-content: space-between; color: white;">
+            <div>Tomorrow: 29 - 19</div>
+            <div><fa-icon [icon]="faCloudRain"></fa-icon></div>
+          </div>
+          <div class="card-four-top">
+              <div class="top">
+                  <div><fa-icon [icon]="faUmbrella"></fa-icon></div>
+                  <div>58%</div>
+              </div>
+              <div class="top">
+                  <div><fa-icon [icon]="faWind"></fa-icon></div>
+                  <div>5 km/h</div>
+              </div>
+              <div class="top">
+                  <div><fa-icon [icon]="faThermometerHalf"></fa-icon></div>
+                  <div>88%</div>
+              </div>
+              <div class="top">
+                  <div><fa-icon [icon]="faCloud"></fa-icon></div>
+                  <div>33%</div>
+              </div>
+            </div>
+            <div class="card-four-title">Possible light rain in the evening</div>
+        </div>
+    </div>
+</div>
+
+
+
+<!-- <router-outlet></router-outlet> -->
